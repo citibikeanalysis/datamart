@@ -2,7 +2,7 @@
 
 with stage_trips as (
     select 
-        STARTTIME,
+        TO_TIMESTAMP(REPLACE(STARTTIME, '"',''), 'YYYY-MM-DD HH:MI:SS.FF') as STARTTIME,
         BIKEID,
         TRIPDURATION, 
         START_STATION_LATITUDE as START_LAT, 
