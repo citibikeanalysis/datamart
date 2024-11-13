@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+    - name: jaffle_shop
+      description: Snowflake S3 Lab Citibike data 
+      database: source_db
+      schema: raw
+      tables:
+          - name: weather
+            description: One record per customer.
+          - name: citibike_csv_trips
+            description: One record per order. Includes cancelled and deleted orders.
